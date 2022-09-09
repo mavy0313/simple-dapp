@@ -30,9 +30,16 @@ The `piggybankContract` is compiled from:
   }
 */
 
+// var cookie = require('cookie');
+
+
 const forwarderOrigin = 'http://localhost:9010'
 
 const initialize = () => {
+  // { sameSite: 'none', secure: true}
+  // document.cookie='SameSite=None,Secure=True';
+  document.cookie="samesite=none; secure=true";
+  // document.cookie='{ sameSite: 'none', secure: true}';
   //You will start here 
   const onboardButton = document.getElementById('connectButton');
   const getAccountsButton = document.getElementById('getAccounts');
@@ -95,4 +102,5 @@ const initialize = () => {
 
   MetaMaskClientCheck();
 }
+
 window.addEventListener('DOMContentLoaded', initialize)

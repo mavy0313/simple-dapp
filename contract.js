@@ -92,14 +92,13 @@ const initialize = () => {
     }
   };
 
-  //Eth_Accounts-getAccountsButton
+  //Eth_Accounts-getAccountsButton  
   getAccountsButton.addEventListener('click', async () => {
     //we use eth_accounts because it returns a list of addresses owned by us.
     const accounts = await ethereum.request({ method: 'eth_accounts' });
     //We take the first address in the array of addresses and display it
     getAccountsResult.innerHTML = accounts[0] || 'Not able to get accounts';
-  });
-
+  });  
   MetaMaskClientCheck();
 }
 

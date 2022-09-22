@@ -33,7 +33,8 @@ The `piggybankContract` is compiled from:
 // var cookie = require('cookie');
 
 
-const forwarderOrigin = 'http://localhost:9010'
+// const forwarderOrigin = 'http://localhost:9010' for local
+const forwarderOrigin = 'https://simple-dapp-drab.vercel.app/' // for production
 
 const initialize = () => {
   // { sameSite: 'none', secure: true}
